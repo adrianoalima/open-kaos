@@ -1,4 +1,4 @@
 open-kaos
 =========
 
-Ferramenta web colaborativa voltada para a modelagem de requisitos baseada no método KAOS.
+Open KAOS is a tool collaborative web for diagramming based on the KAOS method.
