@@ -1,0 +1,275 @@
+/***
+    Copyright (c) 2013, Adriano Alves de Lima
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+***/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.goal {
+    width: 180px;
+    background-color: #d4e3fc;
+    min-height: 35px;
+    margin: 15px 0 0 15px;
+    padding-top: 10px;
+    text-align: center;
+    font-size:1.5em;
+	font-weight:bold;
+    -webkit-transform: skew(325deg);
+    -moz-transform: skew(325deg);
+    -ms-transform: skew(325deg);
+    -o-transform: skew(325deg);
+    transform: skew(325deg);
+	border:1px solid #000;
+}
+
+article{
+	float:left;
+	width: -moz-calc(100% - 340px);
+    width: -webkit-calc(100% - 340px);
+    width: calc(100% - 340px);
+	height: -moz-calc(100% - 250px);
+    height: -webkit-calc(100% - 250px);
+    height: calc(100% - 250px);
+}
+
+header input[type="button"]{
+	margin:-2px;
+}
+
+header{
+	float:left;
+}
+
+input[type="button"]:hover{
+	background-color:LightBlue;
+	cursor:pointer;
+}
+
+#menu{
+	float:left;
+}
+
+#menu li:first-child{
+	background-color:#e6e6e6;
+	border:1px solid #000;
+	min-width:80px;
+	padding:12px;
+	text-align:center;
+	float:left;
+}
+
+#menu li:not(first-child){
+	border:1px solid #000;
+	min-width:80px;
+	padding:12px;
+	text-align:center;
+	float:left;
+}
+
+#menu li:hover{
+	background-color:LightBlue;
+	cursor:pointer;
+}
+
+.button{
+	background-color:#e6e6e6;
+	border:2px solid #000;
+	height:40px;
+	min-width:80px;
+}
+
+.white-button{
+	background-color:#fff;
+	border:1px solid #000;
+	height:40px;
+	min-width:80px;
+}
+
+.without-border-left{
+	border-left:0px;
+}
+
+.without-border-right{
+	border-right: 0px;
+}
+
+.requirement {
+    width: 170px;
+    background-color: #89db79;
+    min-height: 30px;
+    margin: 15px 0 0 15px;
+    padding-top: 10px;
+    text-align: center;
+    font-size:1.5em;
+	font-weight:bold;
+    -webkit-transform: skew(325deg);
+    -moz-transform: skew(325deg);
+    -ms-transform: skew(325deg);
+    -o-transform: skew(325deg);
+    transform: skew(325deg);
+	border:5px solid #000;
+}
+
+.obstacle {
+    width: 180px;
+    background-color: #ff8a84;
+    min-height: 35px;
+    margin: 15px 0 0 15px;
+    padding-top: 10px;
+    text-align: center;
+    font-size:1.5em;
+	font-weight:bold;
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    -ms-transform: skew(30deg);
+    -o-transform: skew(30deg);
+    transform: skew(30deg);
+	border:1px solid #000;
+}
+
+.margin-left-40px{
+	margin-left:40px !important;
+}
+
+.title2{
+	text-align:center;
+	padding:5px;
+	font-weight:bold;
+	font-size:1.5em;
+}
+
+aside{
+	float:left;
+	min-width:272px;
+	border:1px solid #000;
+	padding:15px;
+	clear:left;
+}
+
+aside a{
+	text-align:center;
+	display:block;
+}
+
+textarea{
+	resize:none;
+	width: -moz-calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
+}
+
+html, body{
+	height:100%;
+}
+
+#main{
+	height:100%;
+	min-height:550px;
+	width:100%;
+	position:relative;
+}
+
+#link-explanation
+{
+	margin-top:20px;
+}
+
+footer{
+	clear:left;
+	width:100%;
+	bottom:0;
+	position:absolute;
+	border-top:1px solid #000;
+	border-radius:3px;
+}
+
+footer .title2{
+	background-color: #d4e3fc;
+	border-bottom:1px solid #000;
+}
+
+label.title2{
+	display:block;
+}
+
+.boxshadow:hover {
+	box-shadow: 2px 2px 19px #444;
+   -o-box-shadow: 2px 2px 19px #444;
+   -webkit-box-shadow: 2px 2px 19px #444;
+   -moz-box-shadow: 2px 2px 19px #444;
+}
+._jsPlumb_connector { z-index:4; }
+._jsPlumb_endpoint, .endpointTargetLabel, .endpointSourceLabel{ z-index:21;cursor:pointer; }
+
+._jsPlumb_dragging { z-index:4000; }
+
+.aLabel {
+ 	background-color:white; 
+	padding:0.4em; 
+	font:12px sans-serif; 
+	color:#444;
+	z-index:21;
+	border:1px dotted gray;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	cursor: pointer;
+}
+.aLabel._jsPlumb_hover {
+	background-color:#5C96BC;
+	color:white;	
+	border:1px solid white;
+}
+
+.item-selected
+{
+	border:5px dotted white;
+}
