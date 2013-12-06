@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="utf-8" />
+    <title>Open KAOS</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<link href="cssPlumb.css" rel="stylesheet" type="text/css" />
+    <link href="cssStyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="keyboard.css">
+</head>
+<body data-library="jquery">
+	<!--
+		Copyright (c) 2013, Adriano Alves de Lima
+
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+		THE SOFTWARE.
+	-->
+	<div id="main">
+		<header>
+			<ul id="menu">
+				<li>Salvar</li>
+				<li>Exportar XML</li>
+				<li>Associar Documento</li>
+			</ul>
+		</header>
+		<aside>
+			<h2 class="title2">Artefatos</h2>
+			<div tabindex="6" class="goal objects boxshadow margin-left-40px draggable">Meta</div>
+			<div tabindex="7" class="requirement objects boxshadow margin-left-40px draggable">Requisito</div>
+			<div tabindex="8" class="obstacle objects boxshadow margin-left-40px draggable">Obstáculo</div>
+			<a tabindex="5" id="link-explanation" rel="help" accesskey="h" href="video.mp4"><strong>Explicação do sistema</strong></a>
+		</aside>
+		<article id="containment-wrapper">
+		</article>
+		<footer>
+			<label for="txtXML" class="title2">XML do modelo</label>
+			<textarea id="txtXML" rows="10" accesskey="x" tabindex="2" class="keyboardInput"><?xml version="1.0" encoding="UTF-8"?><kaos></kaos></textarea>
+		</footer>
+	</div>
+	<script type="text/javascript" src="keyboard.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="jquery.jsPlumb-1.5.2-min.js"></script>
+	<script type="text/javascript" src="jscScript.js"></script>
+</body>
+</html>
