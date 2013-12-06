@@ -209,7 +209,49 @@ $(function () {
 				}
 			});
 			
-			jsPlumb.bind("click", function(conn, originalEvent) {
+			jsPlumb.bind("click", function (conn, originalEvent) {
+			    var $target = $("#" + conn.targetId);
+			    var kaosNode = xmlDoc.getElementsByTagName("kaos")[0];
+			    if ($target.hasClass("goal")) {
+			        var goals = xmlDoc.getElementsByTagName("meta");
+			        for (var intT = 0; intT < goals.length; intT++)
+			            if (goals[intT].getAttribute("id") == $target.data("id-goal")) {
+			                var parentNode = goals[intT].parentNode;
+			                while (goals[intT].hasChildNodes()) {
+			                    var clonedNode = goals[intT].lastChild.cloneNode(true);
+			                    goals[intT].removeChild(goals[intT].lastChild);
+			                    kaosNode.appendChild(clonedNode);
+			                }
+			                parentNode.removeChild(goals[intT]);
+			            }
+			    }
+			    else if ($target.hasClass("requirement")) {
+			        var requirements = xmlDoc.getElementsByTagName("requisito");
+			        for (var intT = 0; intT < requirements.length; intT++)
+			            if (requirements[intT].getAttribute("id") == $target.data("id-requirement")) {
+			                var parentNode = requirements[intT].parentNode;
+			                while (requirements[intT].hasChildNodes()) {
+			                    var clonedNode = requirements[intT].lastChild.cloneNode(true);
+			                    requirements[intT].removeChild(requirements[intT].lastChild);
+			                    kaosNode.appendChild(clonedNode);
+			                }
+			                parentNode.removeChild(requirements[intT]);
+			            }
+			    }
+			    else {
+			        var obstacles = xmlDoc.getElementsByTagName("obstaculo");
+			        for (var intT = 0; intT < obstacles.length; intT++)
+			            if (obstacles[intT].getAttribute("id") == $target.data("id-obstacle")) {
+			                var parentNode = obstacles[intT].parentNode;
+			                while (obstacles[intT].hasChildNodes()) {
+			                    var clonedNode = obstacles[intT].lastChild.cloneNode(true);
+			                    obstacles[intT].removeChild(obstacles[intT].lastChild);
+			                    kaosNode.appendChild(clonedNode);
+			                }
+			                parentNode.removeChild(obstacles[intT]);
+			            }
+			    }
+			    $("#txtXML").html(new XMLSerializer().serializeToString(xmlDoc));
 				jsPlumb.detach(conn);
 			});	
 
