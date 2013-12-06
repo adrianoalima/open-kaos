@@ -10,19 +10,19 @@
     THE SOFTWARE.
 */
 
+strXml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><kaos></kaos>";
+if (window.DOMParser)
+    xmlDoc = new DOMParser().parseFromString(strXml, "text/xml");
+else // Internet Explorer
+{
+    xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+    xmlDoc.async = false;
+    xmlDoc.loadXML(strXml);
+}
 $(function () {
 	$( ".draggable" ).draggable({ scroll: true, cursor: "move", helper: "clone", tolerance: "fit" });
 	intI = 0, intIdRequirement = 1, intIdObstacle = 1, intIdGoal = 1;
 
-	var strXml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><kaos></kaos>";
-	if (window.DOMParser)
-		xmlDoc = new DOMParser().parseFromString(strXml,"text/xml");
-	else // Internet Explorer
-	{
-		xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-		xmlDoc.async=false;
-		xmlDoc.loadXML(strXml);
-	}
 	window.jsPlumbDemo = {
 		init : function() {
 
@@ -442,3 +442,7 @@ $(function () {
 	    }
 	});
 });
+
+function exportXML() {
+    window.open('data:text/xml;charset=utf-8,' + new XMLSerializer().serializeToString(xmlDoc));
+}
